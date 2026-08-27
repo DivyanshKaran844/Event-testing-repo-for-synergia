@@ -1,0 +1,29 @@
+# Copy this file to config.properties and fill in your own values.
+# config.properties is git-ignored so your tokens never get committed.
+
+# --- GitHub ---
+# Personal access token with "repo" scope: https://github.com/settings/tokens
+# Optional for public repos (you'll just hit GitHub's low unauthenticated rate limit).
+github.token=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Repo to watch, in owner/repo format
+github.repo=octocat/Hello-World
+
+# --- Jira ---
+# Your Jira Cloud site base URL, no trailing slash
+jira.baseUrl=https://your-domain.atlassian.net
+# The email you log in to Jira with
+jira.email=you@example.com
+# API token: https://id.atlassian.com/manage-profile/security/api-tokens
+jira.apiToken=your-jira-api-token
+# Project key to watch, e.g. "PROJ"
+jira.projectKey=PROJ
+
+# --- Poller ---
+# How often (seconds) to check for new events in "live" mode
+poll.intervalSeconds=30
+
+# --- Filter ---
+# Set to true to only show events YOU personally did, instead of everyone's
+# activity on the repo/project. Identifies you via your GitHub token (needs
+# a real token, not blank) and your Jira login email above.
+filter.onlyMine=false
