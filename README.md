@@ -1,4 +1,4 @@
-# Event Tracker
+\# Event Tracker
 
 A small Java tool that watches a GitHub repo and/or a Jira project for activity
 (labels/tags moved, PRs merged, tickets moving status, etc.) and shows it two ways:
