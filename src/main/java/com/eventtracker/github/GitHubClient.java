@@ -79,6 +79,7 @@ public class GitHubClient {
      * Fetches up to maxPages * 100 of the most recent issue/PR events, newest first
      * as returned by GitHub, and hands back the ones no older than `since`.
      */
+//    This is just to show the event of github pull request
     public List<Event> fetchEventsSince(Instant since, int maxPages) {
         List<Event> events = new ArrayList<>();
         for (int page = 1; page <= maxPages; page++) {
@@ -141,6 +142,7 @@ public class GitHubClient {
             }
             return new JSONArray(response.body());
         } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
             System.err.println("Failed to reach GitHub: " + e.getMessage());
             return new JSONArray();
         }
